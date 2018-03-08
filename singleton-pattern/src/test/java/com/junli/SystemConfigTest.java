@@ -34,27 +34,28 @@ public class SystemConfigTest {
      */
     @Test
     public void testConcurrent() throws InterruptedException {
-        System.out.println("100准备就绪.......");
+        System.out.println("200准备就绪.......");
         long start = System.currentTimeMillis();
-        CountDownLatch countDownLatch = new CountDownLatch(100);
-        for (int i = 0; i < 100; i++) {
+        CountDownLatch countDownLatch = new CountDownLatch(200);
+        for (int i = 0; i < 200; i++) {
             new Thread(() -> {
                 try {
+                    countDownLatch.await();
                     //com.junli.hungry.SystemConfig instance = com.junli.hungry.SystemConfig.getInstance();
                     //com.junli.lazy.SystemConfig instance = com.junli.lazy.SystemConfig.getInstance();
                     com.junli.cache.SystemConfig instance = com.junli.cache.SystemConfig.getInstance();
                     //RegisterMap instance = RegisterMap.getInstance(null);
                     System.out.println("对象：" + instance);
-                    countDownLatch.countDown();
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }).start();
-
+            countDownLatch.countDown();
         }
-        countDownLatch.await();
+
         long end = System.currentTimeMillis();
-        System.out.println("100个线程已经执行完毕！总耗时：" + (end - start));
+        System.out.println("200个线程已经执行完毕！总耗时：" + (end - start));
     }
 
     /**

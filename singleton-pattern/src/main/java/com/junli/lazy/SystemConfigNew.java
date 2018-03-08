@@ -1,51 +1,34 @@
-package com.junli.cache;
+package com.junli.lazy;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Map;
 import java.util.Properties;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author lijun
- * @since 2018-03-08 13:05
+ * @since 2018-03-08 21:14
  */
-public class SystemConfig {
+public class SystemConfigNew {
 
 
-    /**
-     * 唯一KEY
-     */
-    private final static String CACHE_MAP_KEY = "one";
+    private static boolean initialized = false;
 
-    /**
-     * 保存实例的地方
-     */
-    private static Map<String, SystemConfig> map = new ConcurrentHashMap<>();
+    //默认使用SystemConfigNew的时候，会先初始化内部类
+    //如果没使用的话，内部类是不加载的
 
     /**
      * 私有构造方法
      */
-    private SystemConfig() {
+    private SystemConfigNew() {
+        synchronized (SystemConfigNew.class) {
+            if (initialized == false) {
+                initialized = !initialized;
+            } else {
+                throw new RuntimeException("单例已被侵犯");
+            }
+        }
         readConfig();
     }
-
-    /**
-     * 先从map里面取 取不到就放一个
-     *
-     * @return
-     */
-    public static  synchronized SystemConfig getInstance() {
-        if (map.containsKey(CACHE_MAP_KEY)){
-            return map.get(CACHE_MAP_KEY);
-        }else{
-            SystemConfig systemConfig1 = new SystemConfig();
-            map.put(CACHE_MAP_KEY,  systemConfig1);
-            return systemConfig1;
-        }
-
-    }
-
 
     /**
      * 类型
@@ -94,4 +77,17 @@ public class SystemConfig {
 
     }
 
+    /**
+     * @return
+     */
+    public final static SystemConfigNew getInstance() {
+        return LazyHolder.LAZY;
+    }
+
+    /**
+     * 内部类
+     */
+    public static class LazyHolder {
+        private final static SystemConfigNew LAZY = new SystemConfigNew();
+    }
 }
