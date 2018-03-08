@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/
+factory-pattern/factory-pattern.iml
+factory-pattern/target/
+learn-pattern.iml
+singleton-pattern/singleton-pattern.iml
+singleton-pattern/target/
