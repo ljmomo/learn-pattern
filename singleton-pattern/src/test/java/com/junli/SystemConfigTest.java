@@ -1,6 +1,5 @@
 package com.junli;
 
-import com.junli.cache.RegisterMap;
 import com.junli.hungry.SystemConfig;
 import org.junit.Test;
 
@@ -43,8 +42,8 @@ public class SystemConfigTest {
                 try {
                     //com.junli.hungry.SystemConfig instance = com.junli.hungry.SystemConfig.getInstance();
                     //com.junli.lazy.SystemConfig instance = com.junli.lazy.SystemConfig.getInstance();
-                    //com.junli.cache.SystemConfig instance = com.junli.cache.SystemConfig.getInstance();
-                    RegisterMap instance = RegisterMap.getInstance(null);
+                    com.junli.cache.SystemConfig instance = com.junli.cache.SystemConfig.getInstance();
+                    //RegisterMap instance = RegisterMap.getInstance(null);
                     System.out.println("对象：" + instance);
                     countDownLatch.countDown();
                 } catch (Exception e) {
