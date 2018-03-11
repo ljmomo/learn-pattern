@@ -13,6 +13,8 @@
    <module>factory-pattern</module>
     <module>singleton-pattern</module>
     <module>prototy-pepattern</module>
+    <module>proxy-pattern</module>
+    <module>proxy-pattern</module>
 </modules>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

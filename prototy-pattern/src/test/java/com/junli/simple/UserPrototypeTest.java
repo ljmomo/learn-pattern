@@ -41,7 +41,7 @@ public class UserPrototypeTest {
         prototype.setName("张三");
         prototype.setAge(25);
         prototype.setBirthday(new Date(1520583326));
-
+        prototype.setPhone(new Phone("IPHONE","RED"));
         UserPrototypeCloneable prototype1 = (UserPrototypeCloneable)prototype.clone();
         //System.out.println(prototype == prototype1);
 
@@ -53,8 +53,8 @@ public class UserPrototypeTest {
         System.out.println("修改前Phone对象对象："+(prototype.getPhone()==prototype1.getPhone()));
 
         //修改
-        Date newDate = new Date(1530584089);
-        prototype1.birthday=newDate;
+        prototype1.getBirthday().setDate(1530584089);
+        prototype1.getPhone().setName("HUA WEI");
 
 
         System.out.println("修改后原  名称："+prototype.getName()+"  年龄："+prototype.getAge()+" 生日："+prototype.getBirthday()+" 手机："+prototype.getPhone());
@@ -81,9 +81,8 @@ public class UserPrototypeTest {
         System.out.println("修改前Phone对象对象："+(prototype.getPhone()==prototype1.getPhone()));
 
         //修改
-        Date newDate = new Date(1530584089);
-        prototype1.birthday=newDate;
-        prototype1.setPhone(new Phone("HUA WEI","BLUE"));
+        prototype1.getBirthday().setDate(1530584089);
+        prototype1.getPhone().setName("HUA WEI");
 
         System.out.println("修改后原  名称："+prototype.getName()+"  年龄："+prototype.getAge()+" 生日："+prototype.getBirthday()+" 手机："+prototype.getPhone());
         System.out.println("修改后克隆 名称："+prototype1.getName()+"  年龄："+prototype1.getAge()+" 生日："+prototype1.getBirthday()+" 手机："+prototype1.getPhone());
