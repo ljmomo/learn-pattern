@@ -12,7 +12,6 @@
 <modules>
    <module>factory-pattern</module>
     <module>singleton-pattern</module>
-    <module>prototy-pepattern</module>
     <module>proxy-pattern</module>
     <module>proxy-pattern</module>
 </modules>
