@@ -1,7 +1,7 @@
 package com.junli.staticed;
 
 /**
- * 经济人
+ * 经纪人
  * @author lijun
  * @since 2018-03-12 14:18
  */
@@ -20,7 +20,7 @@ public class Agent implements Star{
      */
     @Override
     public void confer() {
-        System.out.println("经济人代表面谈！");
+        System.out.println("经纪人代表面谈！");
     }
 
     /**
@@ -28,7 +28,7 @@ public class Agent implements Star{
      */
     @Override
     public void signContract() {
-        System.out.println("经济人代表签合同！");
+        System.out.println("经纪人代表签合同！");
     }
 
     /**
@@ -44,6 +44,6 @@ public class Agent implements Star{
      */
     @Override
     public void collectMoney() {
-        System.out.println("经济人代表收尾款！");
+        System.out.println("经纪人代表收尾款！");
     }
 }

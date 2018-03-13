@@ -4,3 +4,7 @@
 factory-pattern/factory-pattern.iml
 learn-pattern.iml
 singleton-pattern/singleton-pattern.iml
+proxy-pattern/target/
+singleton-pattern/target
+prototy-pattern/target
+factory-pattern/target

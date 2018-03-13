@@ -37,10 +37,10 @@ public class AgentDynamic implements InvocationHandler{
         Object object = null;
         String name = method.getName();
          if (name.equals("sing")){
-             System.out.println("经济人代表面谈！");
-             System.out.println("经济人代表签合同！");
+             System.out.println("经纪人代表面谈！");
+             System.out.println("经纪人代表签合同！");
              object =  method.invoke(star, args);
-             System.out.println("经济人代表收尾款！");
+             System.out.println("经纪人代表收尾款！");
          }
         return object;
     }

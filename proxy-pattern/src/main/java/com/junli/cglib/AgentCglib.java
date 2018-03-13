@@ -38,10 +38,10 @@ public class AgentCglib implements MethodInterceptor {
 
         String name = method.getName();
         if (name.equals("sing")){
-            System.out.println("经济人代表面谈！");
-            System.out.println("经济人代表签合同！");
+            System.out.println("经纪人代表面谈！");
+            System.out.println("经纪人代表签合同！");
             object =  methodProxy.invokeSuper(o, objects);
-            System.out.println("经济人代表收尾款！");
+            System.out.println("经纪人代表收尾款！");
         }
         return object;
     }
