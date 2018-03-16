@@ -14,6 +14,7 @@
     <module>singleton-pattern</module>
     <module>prototy-pattern</module>
     <module>proxy-pattern</module>
+    <module>strategy-pattern</module>
 </modules>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
