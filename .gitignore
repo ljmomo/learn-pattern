@@ -8,3 +8,4 @@ proxy-pattern/target/
 singleton-pattern/target
 prototy-pattern/target
 factory-pattern/target
+/strategy-pattern/target/
