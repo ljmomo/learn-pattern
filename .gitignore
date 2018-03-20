@@ -10,3 +10,5 @@ prototy-pattern/target
 factory-pattern/target
 /strategy-pattern/target/
 /template-pattern/target/
+/adapter-pattern/target/
+/delegate-pattern/target/

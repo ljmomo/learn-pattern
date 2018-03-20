@@ -17,6 +17,7 @@
     <module>strategy-pattern</module>
     <module>template-pattern</module>
     <module>delegate-pattern</module>
+    <module>adapter-pattern</module>
 </modules>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
