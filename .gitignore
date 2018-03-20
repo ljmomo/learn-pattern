@@ -12,3 +12,4 @@ factory-pattern/target
 /template-pattern/target/
 /adapter-pattern/target/
 /delegate-pattern/target/
+/prototype-pattern/target/

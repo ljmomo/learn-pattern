@@ -1,0 +1,5 @@
+com\junli\simple\UserPrototype.class
+com\junli\simple\TestClone.class
+com\junli\deep\UserPrototypeCloneableDeep.class
+com\junli\simple\Phone.class
+com\junli\simple\UserPrototypeCloneable.class
