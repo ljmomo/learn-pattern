@@ -1,6 +1,7 @@
 package com.junli;
 
 /**
+ * 开发者A
  * @author lijun
  * @since 2018-03-19 17:51
  */
@@ -10,6 +11,6 @@ public class DeveloperA implements IDeveloper {
      */
     @Override
     public void doing(String command) {
-        System.out.println("我是A员工，我开始做："+command);
+        System.out.println("我开发者A，我开始做："+command);
     }
 }

@@ -16,9 +16,14 @@ public class Leader {
     private Map<String,IDeveloper> targets = new HashMap<String,IDeveloper>();
 
     public Leader() {
-        targets.put("加密",new DeveloperA());
+        targets.put("login",new DeveloperA());
         targets.put("encrypt",new DeveloperB());
     }
+
+    /**
+     *项目经理不干活 委派给开发者
+     * @param command 命令
+     */
     public void  doing(String command){
         targets.get(command).doing(command);
     }
