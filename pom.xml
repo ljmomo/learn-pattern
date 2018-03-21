@@ -12,7 +12,7 @@
 <modules>
    <module>factory-pattern</module>
     <module>singleton-pattern</module>
-    <module>prototy-pattern</module>
+    <module>prototype-pattern</module>
     <module>proxy-pattern</module>
     <module>strategy-pattern</module>
     <module>template-pattern</module>
