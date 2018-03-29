@@ -14,7 +14,7 @@ public class UserPrototypeTest {
     @Test
     public void testClone(){
         UserPrototype prototype = new UserPrototype();
-        prototype.setName("张三");
+        prototype.setName("LIJUN");
         prototype.setAge(25);
         prototype.setBirthday(new Date(1520583326));
 
@@ -38,7 +38,7 @@ public class UserPrototypeTest {
     @Test
     public void testCloneCloneable() throws CloneNotSupportedException {
         UserPrototypeCloneable prototype = new UserPrototypeCloneable();
-        prototype.setName("张三");
+        prototype.setName("LIJUN");
         prototype.setAge(25);
         prototype.setBirthday(new Date(1520583326));
         prototype.setPhone(new Phone("IPHONE","RED"));
@@ -66,7 +66,7 @@ public class UserPrototypeTest {
     @Test
     public void testCloneCloneableDeep() {
         UserPrototypeCloneableDeep prototype = new UserPrototypeCloneableDeep();
-        prototype.setName("张三");
+        prototype.setName("LIJUN");
         prototype.setAge(25);
         prototype.setBirthday(new Date(1520583326));
         prototype.setPhone(new Phone("IPHONE","RED"));

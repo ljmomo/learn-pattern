@@ -21,6 +21,7 @@
     <module>decorator-pattern</module>
     <module>observer-pattern</module>
     <module>facade-pattern</module>
+    <module>builder-pattern</module>
 </modules>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
